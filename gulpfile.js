@@ -22,11 +22,11 @@ const def = 'default';
 const dev = 'dev';
 
 const path = {
-  html: 'dev/templates/**/*.html',
-  js: 'dev/scripts/**/*.js',
-  scss: 'dev/styles/**/*.scss',
-  images: 'dev/assets/**/*.+(png|jpg|gif|svg)',
-  fonts: 'dev/assets/**/*.+(woff|woff2)'
+  html: 'src/templates/**/*.html',
+  js: 'src/scripts/**/*.js',
+  scss: 'src/styles/**/*.scss',
+  images: 'src/assets/**/*.+(png|jpg|gif|svg)',
+  fonts: 'src/assets/**/*.+(woff|woff2)'
 }
 
 function copyHTML() {
