@@ -1,0 +1,32 @@
+{
+  "name": "esn-devkit",
+  "version": "0.0.1",
+  "description": "Developer kit for websites by EntaltsevSN",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:EntaltsevSN/esn-devkit.git"
+  },
+  "keywords": [
+    "developer",
+    "kit",
+    "front-end",
+    "entaltsev",
+    "esn",
+    "html",
+    "html5",
+    "css",
+    "css3",
+    "js",
+    "es6"
+  ],
+  "author": "EntaltsevSN",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EntaltsevSN/esn-devkit/issues"
+  },
+  "homepage": "https://github.com/EntaltsevSN/esn-devkit#readme"
+}
