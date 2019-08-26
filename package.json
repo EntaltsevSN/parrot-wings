@@ -28,5 +28,17 @@
   "bugs": {
     "url": "https://github.com/EntaltsevSN/esn-devkit/issues"
   },
-  "homepage": "https://github.com/EntaltsevSN/esn-devkit#readme"
+  "homepage": "https://github.com/EntaltsevSN/esn-devkit#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-cache": "^1.1.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-import-css": "^0.1.3",
+    "gulp-sass": "^4.0.2",
+    "gulp-useref": "^3.1.6",
+    "run-sequence": "^2.2.1"
+  }
 }
