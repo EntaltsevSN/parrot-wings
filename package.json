@@ -1,6 +1,6 @@
 {
   "name": "esn-devkit",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Developer kit for websites by EntaltsevSN",
   "main": "index.js",
   "scripts": {
