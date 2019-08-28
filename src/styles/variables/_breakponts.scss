@@ -1,0 +1,14 @@
+$media_breakpoints: (
+  "xs": 480,
+  "sm": 768,
+  "md": 992,
+  "lg": 1200
+);
+
+@mixin media($media) {
+  @each $code, $breakpoint in $media_breakpoints {
+    @if (str-index($media, $code)) {
+      @media only screen and (min-width: $breakpoint + 'px') { @content }
+    }
+  }
+}

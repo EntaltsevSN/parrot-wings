@@ -5,7 +5,7 @@ Front-end developer kit by Entaltsev Stanislav
 * [Installation](#installation)
 * [Running](#running)
 * [Building](#building)
-* [Future updates](#future-updates)
+* [Release notes](#release-notes)
 
 ## Installation
 
@@ -25,9 +25,11 @@ Rebuild all files for the projects to the ``` dist ``` folder:
 
 > Please note that you need to use the building command to load all the assets files to the "dist" folder
 
-## Future updates
+## Release notes
 
-* Variables
-* Layout grid system
-* Optimal styles you should use (like, _.container_)
+### v1.1.0
 
+* Added basic variables
+* Layout grid system with fluid rows
+* Added common styles including basic layout styles: container, buttons
+* Easy-to-use media quaries

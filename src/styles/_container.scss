@@ -1,0 +1,7 @@
+.container {
+  max-width: $container;
+  width: 100%;
+  padding-left: $spacer;
+  padding-right: $spacer;
+  margin: 0 auto $spacer_big;
+}
