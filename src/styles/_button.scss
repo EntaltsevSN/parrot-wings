@@ -1,4 +1,6 @@
-.btn {
+.btn,
+input[type="submit"],
+input[type="reset"] {
   display: inline-flex;
   padding: $button_padding;
   font-size: $button_font_size;
@@ -10,6 +12,7 @@
   text-align: center;
   background-color: transparent;
   cursor: pointer;
+  letter-spacing: .25px;
   white-space: nowrap;
   user-select: none;
   transition: all ease-out .2s;

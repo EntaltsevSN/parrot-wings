@@ -1,0 +1,13 @@
+// Input settings
+$input_font_size: $font_size - 2;
+$input_font_weight: 400;
+$input_font_family: $font_family;
+$input_line_height: $line_height - .1;
+$input_padding: ($spacer/ 2) ($spacer * .75);
+$input_border_width: $spacer / 8;
+$input_border_style: solid;
+$input_border_color: lighten($gray_color, 24%);
+$input_border_radius: $spacer / 4;
+$input_background_color: #fff;
+$input_text_transform: uppercase;
+$input_filled_text_color: #fff;

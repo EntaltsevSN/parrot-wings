@@ -1,0 +1,150 @@
+form {
+  width: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+textarea,
+.select__value,
+.select__option {
+  font-size: $input_font_size;
+  font-weight: $input_font_weight;
+  font-family: $input_font_family;
+  line-height: $input_line_height;
+  padding: $input_padding;
+  border: $input_border_width $input_border_style $input_border_color;
+  border-radius: $input_border_radius;
+  background-color: $input_background_color;
+  width: 100%;
+
+  &:focus {
+    outline: 0;
+    border-color: $primary_color;
+  }
+}
+
+input[type="submit"],
+input[type="reset"] {
+  &:focus {
+    outline: 0;
+  }
+}
+
+input[type="submit"] {
+  @include button($button_primary_color, 'filled');
+}
+
+input[type="reset"] {
+  @include button($button_primary_color, 'bordered');
+}
+
+.select {
+  position: relative;
+}
+
+.select__value {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+
+  i {
+    font-size: $font_size - 4;
+  }
+}
+
+.select__options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  border: 1px $input_border_style $input_border_color;
+  border-radius: $input_border_radius;
+  margin-top: $spacer / -8;
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity ease-out .2s;
+
+  &.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.select__option {
+  border: 0;
+  border-radius: 0;
+  cursor: pointer;
+
+  &:first-of-type {
+    border-radius: $input_border_radius $input_border_radius 0 0;
+  }
+
+  &:last-of-type {
+    border-radius: 0 0 $input_border_radius $input_border_radius;
+  }
+
+  &:hover {
+    background-color: lighten($input_border_color, 20%);
+  }
+}
+
+.checkbox {
+  width: $spacer * 1.25;
+  height: $spacer * 1.25;
+  border: $input_border_width $input_border_style $input_border_color;
+  border-radius: $input_border_radius;
+  cursor: pointer;
+  display: inline-flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: $font_size - 6;
+  color: transparent;
+  transition: color ease-out .2s;
+}
+
+input[type="checkbox"] {
+  &:checked {
+    & + .checkbox {
+      color: $text_color;
+    }
+  }
+}
+
+.radio {
+  width: $spacer * 1.25;
+  height: $spacer * 1.25;
+  border: $input_border_width $input_border_style $input_border_color;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: $font_size - 6;
+
+  i {
+    display: inline-block;
+    border-radius: 50%;
+    width: $spacer / 2;
+    height: $spacer / 2;
+    transition: background-color ease-out .2s;
+  }
+}
+
+input[type="radio"] {
+  &:checked {
+    & + .radio {
+      i {
+        background-color: $text_color;
+      }
+    }
+  }
+}

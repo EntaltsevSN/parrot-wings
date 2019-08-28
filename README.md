@@ -27,6 +27,13 @@ Rebuild all files for the projects to the ``` dist ``` folder:
 
 ## Release notes
 
+### v1.2.0
+
+* Added basic HTML forms styles
+* Added scripts for restyling basic select, checkbox and radio elements
+* Added FontAwesome icons
+* Added Roboto font
+
 ### v1.1.0
 
 * Added basic variables
