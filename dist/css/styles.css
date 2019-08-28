@@ -686,3 +686,162 @@ input[type="checkbox"]:checked + .checkbox {
 
 input[type="radio"]:checked + .radio i {
   background-color: #242124; }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: opacity ease-out .5s;
+  -o-transition: opacity ease-out .5s;
+  transition: opacity ease-out .5s; }
+  .overlay.is-active {
+    opacity: 1;
+    pointer-events: all; }
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 33.333333%;
+  height: 100%;
+  z-index: 2;
+  min-width: 300px;
+  list-style: none;
+  padding: 0;
+  -webkit-box-shadow: 0 0 12.8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 12.8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  -webkit-transition: all ease-out .5s;
+  -o-transition: all ease-out .5s;
+  transition: all ease-out .5s; }
+  .mobile-menu.is-visible {
+    left: 0; }
+  @media only screen and (min-width: 768px) {
+    .mobile-menu {
+      position: relative;
+      top: initial;
+      left: initial;
+      width: auto;
+      height: auto;
+      z-index: auto;
+      min-width: auto;
+      list-style: initial;
+      padding: inherit;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      background-color: transparent;
+      -webkit-transition: all ease-out .5s;
+      -o-transition: all ease-out .5s;
+      transition: all ease-out .5s; } }
+
+.mobile-menu__item {
+  margin-bottom: 0; }
+  @media only screen and (min-width: 768px) {
+    .mobile-menu__item {
+      margin-bottom: inherit; } }
+
+.mobile-menu__link {
+  padding: 12.8px 20px;
+  display: block;
+  font-size: 15px;
+  color: #242124;
+  font-weight: 500; }
+  .mobile-menu__link:hover {
+    background-color: #f4f4f4; }
+  @media only screen and (min-width: 768px) {
+    .mobile-menu__link {
+      padding: inherit;
+      display: inherit;
+      font-size: inherit;
+      color: #f3826f;
+      font-weight: inherit; } }
+
+.mobile-menu__btn {
+  width: 30px;
+  height: 30px;
+  border: 0;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0;
+  position: relative; }
+  .mobile-menu__btn:focus {
+    outline: 0; }
+  .mobile-menu__btn.is-active .mobile-menu__line {
+    background-color: transparent; }
+    .mobile-menu__btn.is-active .mobile-menu__line:before {
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      margin-top: -1px; }
+    .mobile-menu__btn.is-active .mobile-menu__line:after {
+      -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      margin-top: -1px; }
+  @media only screen and (min-width: 768px) {
+    .mobile-menu__btn {
+      display: none; } }
+
+.mobile-menu__line {
+  width: 100%;
+  height: 2px;
+  background-color: #242124; }
+  .mobile-menu__line:before, .mobile-menu__line:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #242124;
+    position: absolute;
+    -webkit-transition: all ease-out .2s;
+    -o-transition: all ease-out .2s;
+    transition: all ease-out .2s; }
+  .mobile-menu__line:before {
+    top: 50%;
+    left: 0;
+    margin-top: -9px; }
+  .mobile-menu__line:after {
+    top: 50%;
+    left: 0;
+    margin-top: 7px; }
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 66.666666%;
+  height: auto;
+  z-index: 2;
+  padding: 28px 40px;
+  background-color: #fff;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all ease-out .5s;
+  -o-transition: all ease-out .5s;
+  transition: all ease-out .5s; }
+  .modal.is-visible {
+    opacity: 1;
+    pointer-events: auto; }

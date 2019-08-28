@@ -66,4 +66,71 @@ $(function() {
 
     $radio.hide();
   });
+
+  
+
+  // Mobile menu
+  var $mobileMenu = $('[data-mobile-menu]');
+  
+  if($mobileMenu.length) {
+    $mobileMenu.addClass('mobile-menu');
+    $mobileMenu.find('li').addClass('mobile-menu__item');
+    $mobileMenu.find('a').addClass('mobile-menu__link');
+    
+    var $mobileMenuButton =  $('<button />', {
+      'class': 'mobile-menu__btn',
+      'data-mobile-menu-toggle': ''
+    }).insertAfter($mobileMenu);
+    var $mobileMenuButtonLine = $('<span />', {
+      'class': 'mobile-menu__line'
+    }).appendTo($mobileMenuButton);
+    
+    $mobileMenuButton.on('click', function() {
+      $mobileMenu.toggleClass('is-visible');
+      $(this).toggleClass('is-active');
+      $overlay.toggleClass('is-active');
+    });
+  }
+
+  // Modal
+  var $modalToggle = $('[data-modal-toggle]');
+  
+  if($modalToggle.length) {
+    $modalToggle.each(function() {
+      var $this = $(this);
+
+      $this.on('click', function() {
+        $($this.attr('href')).toggleClass('is-visible');
+        $overlay.toggleClass('is-active');
+      });
+    });
+  }
+
+  // Overlay
+  var $overlay = $('<div />', {
+    'class': 'overlay',
+    'data-overlay': ''
+  }).appendTo($('body'));
+  
+  $overlay.on('click', function() {
+    $overlay.toggleClass('is-active');
+
+    if($mobileMenu.length && $mobileMenu.hasClass('is-visible')) {
+      $mobileMenu.toggleClass('is-visible');
+    }
+
+    if($mobileMenuButton !== undefined && $mobileMenuButton.hasClass('is-active')) {
+      $mobileMenuButton.toggleClass('is-active');
+    }
+
+    if($('[data-modal]').length) {
+      $('[data-modal]').each(function() {
+        var $modal = $(this);
+
+        if($modal.hasClass('is-visible')) {
+          $modal.toggleClass('is-visible');
+        }
+      });
+    }
+  });
 });

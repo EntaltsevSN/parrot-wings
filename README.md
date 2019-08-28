@@ -27,6 +27,11 @@ Rebuild all files for the projects to the ``` dist ``` folder:
 
 ## Release notes
 
+### v1.3.0
+
+* Added scripts and styles for mobile menu
+* Added scripts and styles for modal windows
+
 ### v1.2.0
 
 * Added basic HTML forms styles
