@@ -27,6 +27,11 @@ Rebuild all files for the projects to the ``` dist ``` folder:
 
 ## Release notes
 
+### v1.4.0
+
+* Added scripts for anchor links
+* Added scripts and styles for the dropdown lists
+
 ### v1.3.1
 
 * Updated base scripts and icluded to the specific file

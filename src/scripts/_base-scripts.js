@@ -149,10 +149,44 @@ $(function() {
     runOverlayClick($modalItem);
   }
 
+  // Anchor links
+  function runAnchorLinks(anchorLinkItem) {
+    $(anchorLinkItem).click(function(e){
+      e.preventDefault();
+
+      $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+      }, 500);
+    });
+  }
+
+  // Dropdown
+  function runDropdownLists(dropdownList) {
+    var $dropdown = $(dropdownList);
+
+    $dropdown.each(function() {
+      var $this = $(this);
+      var $link = $this.find('[data-dropdown-toggle]');
+      var $list = $this.find('[data-dropdown-list]');
+
+      $link.on('click', function() {
+        $list.toggleClass(cssClass.isActive);
+      });
+  
+      $(document).mouseup(function (e) {
+        if (!$list.is(e.target)) {
+          $list.removeClass(cssClass.isActive);
+        }
+      });
+    });
+  }
+
   // Run base scripts
   updateSelectStyles('select');
   updateCheckboxStyles('input[type="checkbox"]');
   updateRadioStyles('input[type="radio"]');
   runMobileMenu('[data-mobile-menu]');
   runModal('[data-modal]');
+  runAnchorLinks('[data-anchor-link]');
+  runDropdownLists('[data-dropdown]');
 });

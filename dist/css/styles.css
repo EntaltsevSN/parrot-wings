@@ -852,3 +852,36 @@ input[type="radio"]:checked + .radio i {
   @media only screen and (min-width: 768px) {
     .modal {
       padding: 28px 40px; } }
+
+.dropdown {
+  display: inline-block; }
+
+.dropdown__list {
+  position: absolute;
+  min-width: 0;
+  border: 1px solid #c5c5c5;
+  border-radius: 4px;
+  background-color: #fff;
+  margin-top: 1px;
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: opacity ease-out .2s;
+  -o-transition: opacity ease-out .2s;
+  transition: opacity ease-out .2s; }
+  .dropdown__list.is-active {
+    opacity: 1;
+    pointer-events: auto; }
+
+.dropdown__link {
+  display: block;
+  border: 0;
+  border-radius: 0;
+  padding: 8px 10.66667px;
+  cursor: pointer; }
+  .dropdown__link:first-of-type {
+    border-radius: 4px 4px 0 0; }
+  .dropdown__link:last-of-type {
+    border-radius: 0 0 4px 4px; }
+  .dropdown__link:hover {
+    background-color: #f8f8f8; }
