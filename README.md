@@ -27,6 +27,11 @@ Rebuild all files for the projects to the ``` dist ``` folder:
 
 ## Release notes
 
+### v1.3.1
+
+* Updated base scripts and icluded to the specific file
+* Updated styles for the base scripts
+
 ### v1.3.0
 
 * Added scripts and styles for mobile menu
