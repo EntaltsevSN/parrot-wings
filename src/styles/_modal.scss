@@ -4,8 +4,8 @@
   left: 50%;
   width: 66.666666%;
   height: auto;
-  z-index: 2;
-  padding: ($spacer * 1.75) ($spacer * 2.5);
+  z-index: 4;
+  padding: $spacer ($spacer * 1.25);
   background-color: #fff;
   border-radius: $spacer / 2;
   box-shadow: 0 0 ($spacer / 2) rgba(0, 0, 0, .1);
@@ -14,8 +14,12 @@
   pointer-events: none;
   transition: all ease-out .5s;
 
-  &.is-visible {
+  &.is-active {
     opacity: 1;
     pointer-events: auto;
+  }
+
+  @include media(sm) {
+    padding: ($spacer * 1.75) ($spacer * 2.5);
   }
 }

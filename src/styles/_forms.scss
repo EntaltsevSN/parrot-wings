@@ -71,7 +71,7 @@ input[type="reset"] {
   pointer-events: none;
   transition: opacity ease-out .2s;
 
-  &.is-visible {
+  &.is-active {
     opacity: 1;
     pointer-events: auto;
   }

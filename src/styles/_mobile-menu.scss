@@ -4,15 +4,19 @@
   left: -100%;
   width: 33.333333%;
   height: 100%;
-  z-index: 2;
+  z-index: 3;
   min-width: $spacer_big * 12.5;
-  list-style: none;
-  padding: 0;
   box-shadow: 0 0 ($spacer / 1.25) rgba(0, 0, 0, .1);
   background-color: #fff;
   transition: all ease-out .5s;
 
-  &.is-visible {
+  &,
+  & ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  &.is-active {
     left: 0;
   }
 
@@ -24,11 +28,15 @@
     height: auto;
     z-index: auto;
     min-width: auto;
-    list-style: initial;
-    padding: inherit;
     box-shadow: none;
     background-color: transparent;
-    transition: all ease-out .5s;
+    transition: all ease-out 0s;
+
+    &,
+    & ul {
+      list-style: initial;
+      padding: inherit;
+    }
   }
 }
 
