@@ -1,0 +1,128 @@
+.products {
+  &__title {
+    position: relative;
+    font-size: 26px;
+    margin-bottom: 26px;
+
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 19px;
+      height: 8px;
+      background-color: #933435;
+      left: -25px;
+      top: 48%;
+      z-index: 0;
+    }
+
+    @media (max-width: 767px) {
+      display: inline-block;
+      left: 48px;
+      margin-bottom: 17px;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0 -16px;
+    padding: 0 10px 0 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    @media (max-width: 767px) {
+      padding: 0;
+      margin: 0;
+      justify-content: center;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    @media (max-width: 480px) {
+      margin: 0;
+    }
+
+    &:after {
+      content: '';
+      flex: auto;
+    }
+  }
+
+  &__item {
+    max-width: 148px;
+    text-align: center;
+    padding: 0 17px 40px 15px;
+
+    @media (max-width: 767px) {
+      padding: 0 16px 33px;
+    }
+
+    &--hidden {
+      visibility: hidden;
+      height: 0;
+      padding: 0 142px;
+      margin: 0;
+      border-top-width: 0;
+      border-bottom-width: 0;
+
+      @media (max-width: 992px) {
+        padding: 0 70px;
+      }
+    }
+  }
+
+  &__image {
+    max-width: 111px;
+    border: 1px solid #999;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, .34);
+    margin-bottom: 2px;
+  }
+
+  &__meta {
+    color: #525252;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    margin-bottom: -2px;
+  }
+
+  &__name {
+    font-size: 17px;
+    margin-bottom: 5px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__more {
+    text-align: center;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  &__link {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #444444;
+    display: inline-block;
+    line-height: 1;
+    border-bottom: 1px solid #444;
+    position: relative;
+    top: -8px;
+    left: -10px;
+  }
+
+  &__nav {
+    position: relative;
+  }
+
+  &__button {
+    &:hover {
+      & + .popup {
+        opacity: 1;
+      }
+    }
+  }
+}

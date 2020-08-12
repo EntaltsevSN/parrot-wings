@@ -49,6 +49,7 @@ $fluid_types: (
   display: flex;
   padding-left: $spacer;
   padding-right: $spacer;
+  flex-flow: row wrap;
 }
 
 .row,

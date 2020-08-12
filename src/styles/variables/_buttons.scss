@@ -1,13 +1,13 @@
 // Button settings
-$button_font_size: $font_size - 4;
+$button_font_size: 12px;
 $button_font_weight: 400;
 $button_font_family: $font_family;
 $button_line_height: $line_height;
-$button_padding: ($spacer/ 2) $spacer;
-$button_border_width: $spacer / 8;
+$button_padding: 7px 22px 4px 22px;
+$button_border_width: 1px;
 $button_border_style: solid;
 $button_border_radius: $spacer / 4;
-$button_text_transform: uppercase;
+$button_text_transform: none;
 $button_filled_text_color: #fff;
 
 // Button small settings
@@ -23,12 +23,11 @@ $button_secondary_color: $secondary_color;
 @mixin button($style, $type) {
   @if $type == 'filled' {
     background-color: $style;
-    color: $button_filled_text_color;
 
     &:hover,
-    &:active {
+    &:active,
+    &:focus {
       background-color: darken($style, 10%);
-      color: darken($button_filled_text_color, 10%)
     }
   } @else if $type == 'bordered' {
     border-color: $style;
@@ -36,7 +35,8 @@ $button_secondary_color: $secondary_color;
     color: $style;
 
     &:hover,
-    &:active {
+    &:active,
+    &:focus {
       border-color: darken($style, 10%);
       color: darken($style, 10%)
     }

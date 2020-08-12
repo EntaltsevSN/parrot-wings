@@ -1,0 +1,44 @@
+.feedback {
+  background-color: #dadada;
+  box-shadow: 0 0 6px rgba(0, 0, 0, .35);
+  padding: 16px 24px 20px;
+  margin-bottom: 28px;
+
+  @media (max-width: 480px) {
+    display: none;
+  }
+
+  &__title {
+    font-size: 28px;
+    padding: 0 0 12px 12px;
+    border-bottom: 1px solid #c3c3c3;
+    margin-bottom: 0;
+  }
+
+  &__form {
+    border-top: 1px solid #e4e4e4;
+    padding: 12px 0 0;
+    text-align: right;
+  }
+
+  &__input[type=text],
+  &__input[type=email] {
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    padding: 18px 14px 11px;
+    letter-spacing: .2px;
+    max-width: 100%;
+  }
+
+  &__description {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    text-align: center;
+    margin-top: 3px;
+    line-height: 1.2;
+    margin-bottom: 14px;
+  }
+}

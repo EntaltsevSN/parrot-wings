@@ -1,0 +1,68 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Unlimited exchange",
+      "image": "assets/product-1.png",
+      "meta": "2 props",
+      "popupTitle": "Popup Header",
+      "popupText": "<p>Lorem ipsum dolor sit amet</p>"
+    },
+    {
+      "id": 2,
+      "title": "International exchange",
+      "image": "assets/product-2.png",
+      "meta": "1 prop",
+      "popupTitle": "Popup Header",
+      "popupText": "<p>Lorem ipsum dolor sit amet</p>"
+    },
+    {
+      "id": 3,
+      "title": "Additional services",
+      "image": "assets/product-3.png",
+      "meta": "3 props, all",
+      "popupTitle": "Popup Header",
+      "popupText": "<p>Lorem ipsum dolor sit amet</p>"
+    },
+    {
+      "id": 4,
+      "title": "Support",
+      "image": "assets/product-4.png",
+      "meta": "5 props",
+      "popupTitle": "Popup Header",
+      "popupText": "<p>Lorem ipsum dolor sit amet</p>"
+    },
+    {
+      "id": 5,
+      "title": "Holiday works",
+      "image": "assets/product-5.png",
+      "meta": "2 props",
+      "popupTitle": "Popup Header",
+      "popupText": "<p>Lorem ipsum dolor sit amet</p>"
+    },
+    {
+      "id": 6,
+      "title": "Postal delivery",
+      "image": "assets/product-6.png",
+      "meta": "not in access",
+      "popupTitle": "Popup Header",
+      "popupText": "<p>Lorem ipsum dolor sit amet</p>"
+    },
+    {
+      "id": 7,
+      "title": "Document management",
+      "image": "assets/product-7.png",
+      "meta": "2 props",
+      "popupTitle": "Popup Header",
+      "popupText": "<p>Lorem ipsum dolor sit amet</p>"
+    },
+    {
+      "id": 8,
+      "title": "Promotions",
+      "image": "assets/product-8.png",
+      "meta": "1 prop",
+      "popupTitle": "Popup Header",
+      "popupText": "<p>Lorem ipsum dolor sit amet</p>"
+    }
+  ]
+}

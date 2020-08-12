@@ -1,0 +1,64 @@
+.monitor {
+  background-color: #dadada;
+  box-shadow: 0 0 6px rgba(0, 0, 0, .35);
+  padding: 16px 24px 20px;
+  width: 100%;
+  position: relative;
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparentize(#e3e3e3, .15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    padding: 0 0 0 1px;
+  }
+
+  &__loader {
+    display: block; 
+    margin-bottom: 9px;
+    margin-top: 4px;
+    animation: 3s linear 1s infinite normal spin;
+  }
+
+  &__loading {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0 0 0 7px;
+  }
+
+  &__title {
+    font-size: 28px;
+    padding: 0 0 12px 12px;
+    border-bottom: 1px solid #c3c3c3;
+    margin-bottom: 0;
+  }
+
+  &__body {
+    border-top: 1px solid #e4e4e4;
+    padding: 18px 0 38px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    p {
+      visibility: hidden;
+      margin-bottom: 12px;
+    }
+  }
+
+  &__nav {
+    text-align: right;
+  }
+}
+
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(-360deg);
+  }
+}

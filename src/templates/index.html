@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <!-- Included CSS files -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto:100i,300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" integrity="sha256-zmfNZmXoNWBMemUOo1XUGFfc0ihGGLYdgtJS3KCr/l0=" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
   <link rel="stylesheet" href="css/styles.css">
@@ -16,9 +16,206 @@
   <script src="_base-scripts.js"></script>
   <script src="scripts.js"></script>
   
-  <title>Document</title>
+  <title>Parrot wings</title>
 </head>
 <body>
+
+<div class="layout">
+  <header class="header">
+    <div class="container header__container">
+      <section class="header__bg">
+        <section class="header__controls">
+          <button class="header__burger" data-toggle-menu>
+            <span class="header__line"></span>
+          </button>
+          <button class="header__search" data-toggle-search>
+            <svg xmlns="http://www.w3.org/2000/svg" width="28.931" height="28.932" viewBox="0 0 28.931 28.932"><path d="M28.344 25.518l-6.114-6.115a12.177 12.177 0 002.303-7.137c0-3.275-1.275-6.355-3.594-8.672A12.183 12.183 0 0012.266 0a12.176 12.176 0 00-8.673 3.594 12.183 12.183 0 00-3.592 8.672c0 3.276 1.275 6.356 3.592 8.674a12.187 12.187 0 008.673 3.594c2.599 0 5.067-.813 7.136-2.303l6.114 6.115c.392.391.902.586 1.414.586a2 2 0 001.414-3.414zM6.422 18.111c-1.562-1.562-2.421-3.639-2.421-5.846s.859-4.282 2.421-5.844c1.561-1.562 3.636-2.422 5.844-2.422s4.284.86 5.845 2.422c1.562 1.562 2.422 3.638 2.422 5.845s-.859 4.283-2.422 5.846c-1.562 1.562-3.636 2.42-5.845 2.42s-4.285-.86-5.844-2.421z"/></svg>
+          </button>
+        </section>
+        <nav class="header__nav" data-menu>
+          <ul class="header__list">
+            <li class="header__item">
+              <a href="#Home" class="header__link">Home</a>
+            </li>
+            <li class="header__item">
+              <a href="#Credits" class="header__link">Credits</a>
+            </li>
+            <li class="header__item">
+              <a href="#Exchange" class="header__link">Exchange</a>
+            </li>
+            <li class="header__item">
+              <a href="#Partners" class="header__link">Partners</a>
+            </li>
+            <li class="header__item">
+              <a href="#Stock" class="header__link">Stock</a>
+            </li>
+            <li class="header__item">
+              <a href="#Holding" class="header__link">Holding</a>
+            </li>
+            <li class="header__item">
+              <a href="#About" class="header__link">About</a>
+            </li>
+          </ul>
+        </nav>
+        <h1 class="header__title">ParrotWings Exchange</h1>
+      </section>
+    </div>
+  </header>
+  <main class="main">
+    <div class="container main__container row">
+      <section class="column column--sm-8 content">
+        <header class="content__header">
+          <h2 class="content__title">ParrotWings Exchange</h2>
+          <form action="" class="form form--fixed" data-form>
+            <section class="form__group">
+              <input type="search" name="search" id="search" class="form__input" placeholder="Search..." data-search>
+              <a href="#" class="form__link" data-toggle-search>&times;</a>
+            </section>
+          </form>
+        </header>
+        <section class="content__body">
+          <section class="products">
+            <h3 class="products__title">Products</h3>
+            <ul class="products__list" data-products></ul>
+            <section class="products__more">
+              <a href="#Order" class="products__link">More products...</a>
+            </section>
+          </section>
+        </section>
+      </section>
+      <aside class="column column--sm-4 sidebar">
+        <section class="feedback">
+          <h2 class="feedback__title">Sign Up</h2>
+          <form action="" class="form feedback__form" data-form>
+            <input type="text" name="first-name" id="first-name" placeholder="First Name" class="form__input feedback__input" required>
+            <input type="text" name="last-name" id="last-name" placeholder="Last Name" class="form__input feedback__input" required>
+            <input type="email" name="email" id="email" placeholder="Email" class="form__input feedback__input" required>
+            <p class="feedback__description">By creating a PW Exchange Account you acknowledge that you have read, understood and agree to the Terms of Use and Privacy Policy.</p>
+            <button type="submit" class="btn btn--secondary btn--big feedback__submit">Sign Up</button>
+          </form>
+        </section>
+        <section class="monitor">
+          <div class="monitor__overlay" data-overlay>
+            <img src="assets/loader.png" alt="" class="monitor__loader">
+            <p class="monitor__loading">Loading...</p>
+          </div>
+          <h2 class="monitor__title">Online Monitor</h2>
+          <section class="monitor__body">
+            <p data-line="1">Connecting to server...</p>
+            <p data-line="2">Loading data..</p>
+            <p data-line="3">Loading templates..</p>
+            <p data-line="4">Connected.</p>
+          </section>
+          <section class="monitor__nav">
+            <a href="#Connect" class="btn btn--secondary btn--big" data-connect>Connect</a>
+          </section>
+        </section>
+      </aside>
+    </div>
+  </main>
+  <footer class="footer">
+    <section class="footer__nav">
+      <div class="container">
+        <div class="row footer__row">
+          <div class="column column--sm-8 footer__links">
+            <a href="#Evernote" class="footer__button">
+              <img src="assets/evernote.png" alt="" class="footer__icon">
+            </a>
+            <a href="#Facebook" class="footer__button">
+              <img src="assets/facebook.png" alt="" class="footer__icon">
+            </a>
+            <a href="#Pinterest" class="footer__button">
+              <img src="assets/pinterest.png" alt="" class="footer__icon">
+            </a>
+            <a href="#Twitter" class="footer__button">
+              <img src="assets/twitter.png" alt="" class="footer__icon">
+            </a>
+            <a href="#Youtube" class="footer__button">
+              <img src="assets/youtube.png" alt="" class="footer__icon">
+            </a>
+            <a href="#Github" class="footer__button">
+              <img src="assets/github.png" alt="" class="footer__icon">
+            </a>
+          </div>
+          <div class="column column--sm-4 footer__copyright">
+            <span>©</span> Parrot Wings
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="footer__content">
+      <div class="container">
+        <div class="row footer__contents">
+          <div class="column column--sm-8 footer__lists">
+            <section class="footer__info">
+              <div class="footer__title">Recruitment Info</div>
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Candidate First Name: Username</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Candidate Last Name: Username</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Spent Time: X hours</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Email: username@server.name</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Test date: dd.mm,yyyy</a>
+                </li>
+              </ul>
+            </section>
+            <section class="footer__info">
+              <div class="footer__title">Resources</div>
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Loader icon --- search on Fontello.com</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Icons --- Entypo</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Fonts --- search in this file</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Background --- standart situation: designer lose file</a>
+                </li>
+              </ul>
+            </section>
+            <section class="footer__info">
+              <div class="footer__title">Navigation</div>
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Development</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Application</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Holding</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">About</a>
+                </li>
+              </ul>
+            </section>
+          </div>
+          <div class="column column--sm-4 footer__other">
+            <img src="assets/browsers.png" alt="" class="footer__browsers">
+            <p class="footer__description">
+              Project should work on next stack: <br>IE11, actual version of Firefox, Chrome <br>on desktop and android, Opera (opera mini), <br>Safari on mac and ios.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="footer__copyright footer__copyright--additional">
+      <span>©</span> Parrot Wings
+    </div>
+  </footer>
+</div>
 
 </body>
 </html>
